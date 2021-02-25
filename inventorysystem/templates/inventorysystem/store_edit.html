@@ -1,0 +1,20 @@
+{% extends 'inventorysystem/base.html' %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Store</title>
+</head>
+<body>
+
+</body>
+</html>
+
+{% load crispy_forms_tags %}
+{% block content %}
+    <h1>Edit Store</h1>
+    <form method="POST" class="customer-form">{% csrf_token %}
+        {{ form|crispy }}
+        <button type="submit" class="save btn btn-default">Update</button>
+    </form>
+{% endblock %}

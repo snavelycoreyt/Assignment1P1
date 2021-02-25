@@ -1,0 +1,23 @@
+{% extends 'inventorysystem/base.html' %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Store Delete</title>
+</head>
+<body>
+
+</body>
+</html>
+
+ {% block body_block %}
+    <h1>Delete {{ store.store_brand }}?</h1>
+
+    <form method="post">
+        {% csrf_token %}
+        <input type="submit" class="btn btn-danger" value="Delete">
+        <a href="{% url 'inventorysystem:home' pk=store.store_brand %} ">Cancel</a>
+
+    </form>
+
+{% endblock %}
